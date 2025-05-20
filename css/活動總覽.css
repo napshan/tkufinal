@@ -1,0 +1,126 @@
+/* 活動報告整體版型 */
+.activity-report {
+  background-color: #f9f5f0;
+  /* 把上下內距壓緊一些 */
+  padding: 20px 20px 15px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  line-height: 1.7;
+}
+
+/* 報告標題 */
+.activity-report h2 {
+  text-align: center;
+  color: #4A3F35;
+  margin-bottom: 16px;
+}
+
+/* ——— 間距調整 ——— */
+/* 有效表單人數下面留 1em */
+.activity-info p:last-child {
+  margin-bottom: 1em !important;
+}
+/* 圖片走馬燈，上方 0 下方 1em */
+.carousel {
+  margin: 0 auto 1em !important;
+}
+/* 活動內容標題 h3 前後間距 */
+.activity-report h3 {
+  margin-top: 1em !important;
+  margin-bottom: 0.5em;
+}
+
+/* ——— 走馬燈基本樣式 ——— */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  overflow: hidden;
+}
+.carousel-slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0 .5rem;
+  cursor: pointer;
+  color: #5b4636;
+  border-radius: 4px;
+  user-select: none;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.carousel-btn:hover { background: rgba(255,255,255,0.9); }
+
+/* 概覽表格 */
+.overview-table {
+  width: 80%;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.overview-table thead { background-color: #eae3da; }
+.overview-table th,
+.overview-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.overview-table th {
+  border-bottom: 2px solid #d4c1ac;
+  color: #4a3f35;
+}
+.overview-table td {
+  border-bottom: 1px solid #f0ebe3;
+  color: #333;
+}
+.overview-table tbody tr:nth-child(even) { background: #fdfaf5; }
+.overview-table tbody tr:hover { background: #f5eee7; transition: background 0.2s; }
+.overview-table a {
+  color: #5b4636;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+.overview-table a:hover { color: #4a3f35; border-bottom-color: currentColor; }
+
+/* SDGs 區塊 */
+.sdgs-details {
+  width: 70%;
+  margin: 0.5rem auto 2rem;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+}
+.sdgs-details p { margin: 0.4rem 0; }
+.sdgs-details strong { color: #4A3F35; }
+
+/* 響應式 */
+@media (max-width: 768px) {
+  .overview-table, .overview-table th, .overview-table td {
+    font-size: 0.85rem;
+  }
+  .overview-table { width: 95%; }
+}

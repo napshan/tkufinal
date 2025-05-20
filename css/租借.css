@@ -1,0 +1,91 @@
+/* gallery container */
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* images */
+.section img {
+  width: 100%;
+  aspect-ratio: 4/3;        /* <-- 用這行取代 height:0 + padding-bottom hack */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* hover 放大效果 */
+.section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 如果還要保留點擊後的 lightbox，就把它調整成： */
+.section img:active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  max-height: 90vh;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: rgba(0,0,0,0.8);
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* 在你的租借.css 或 <style> 區塊裡加入 */
+
+.activity-borrow {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.activity-borrow h2 {
+  text-align: center;
+  color: #4A3F35;
+  margin-bottom: 1rem;
+}
+
+/* 固定兩欄的 Grid */
+.activity-borrow .section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;               /* 格子間距 */
+  justify-items: center;   /* 水平置中格內內容 */
+  align-items: center;     /* 垂直置中格內內容 */
+  overflow: visible;
+}
+
+/* 圖片樣式 */
+.activity-borrow .section img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Hover 微放大 */
+.activity-borrow .section img:hover {
+  transform: scale(2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* 手機螢幕改為一欄 */
+@media (max-width: 600px) {
+  .activity-borrow .section {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,71 @@
+/* 章程主容器 plans-container */
+#plans-container { 
+  position: relative; 
+  overflow: visible; 
+}
+
+marker#arrowhead polygon {
+  fill: #0078d7;
+}
+
+/* 章程內文 (pre block) */
+#org-章程 pre {
+  background-color: #fdfaf5;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: auto;
+}
+
+/* 章節標題 */
+h1, h2 {
+  text-align: center;
+  color: #4A3F35;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #fdfaf5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+.章程標題 {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  color: #4A3F35;
+  margin-bottom: 1.5rem;
+}
+
+.章程修訂 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: normal;
+}
+/* 组织章程修订链接（左对齐到“第九條”缩进） */
+.org-links {
+  padding-left: 2em;   /* 根据<pre>里第九條的缩进量调整 */
+  margin: 1rem 0;
+}
+.org-links p {
+  margin: 0.2rem 0;
+}
+.org-links a {
+  color: #6e4f3a;
+  text-decoration: underline;
+  font-size: 0.85rem;
+}
+.org-links a:hover {
+  color: #4A3F35;
+}
+
+

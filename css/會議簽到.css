@@ -1,0 +1,45 @@
+    /* 標題置中 */
+    .page-title {
+      text-align: center;
+      margin: 2rem 0;
+      color: #4A3F35;
+      font-size: 2rem;
+    }
+    /* 會議列表容器 */
+    .meeting-records {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      padding: 0 1rem;
+    }
+    /* 將列表排成響應式格子 */
+    .meeting-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .meeting-list li {
+      background: #f9f5f0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .meeting-list li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .meeting-list a {
+      color: #5b4636;
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .meeting-list a:hover {
+      color: #4a3f35;
+    }

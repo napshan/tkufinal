@@ -1,0 +1,30 @@
+    /* 置中 Section 內文 */
+    section {
+      text-align: center;
+    }
+    /* 幻燈片區塊樣式：水平置中 */
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    .slider img {
+      max-width: 80vw;
+      max-height: 80vh;
+      width: auto;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .slider button {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #6e4f3a;
+      padding: 0.5rem;
+    }
+    .slider button:hover {
+      color: #4A3F35;
+    }
